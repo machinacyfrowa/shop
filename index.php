@@ -14,6 +14,8 @@
     <?php
     require_once('class/Catalog.class.php');
     $c = new Catalog();
+    $c->addCategory("Category 1");
+    $c->addCategory("Category 2");
     $p1 = new Product(1, "Produkt 1", 44.80, "product1.png", 0.2);
     $p2 = new Product(2, "Produkt 2", 12.40, "product2.png", 0.3);
     $p3 = new Product(3, "Produkt 3", 5.60, "product3.png", 0.23);
@@ -23,6 +25,19 @@
     $c->addProduct($p3);
     $c->addProduct($p4);
     ?>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <?php $c->showCategoryList(); ?>
+        </div>
+        <div class="col-10">
+          <div class="row">
+            <?php $c->showProducts(); ?>
+          </div>
+        </div>
+      </div>
+    </div><!--/container-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
