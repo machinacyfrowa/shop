@@ -11,7 +11,9 @@
     <title>Sklep</title>
   </head>
   <body>
-    
+    <?php
+    require_once('class/Catalog.class.php')
+    ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
