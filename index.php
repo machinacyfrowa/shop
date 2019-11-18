@@ -14,8 +14,10 @@
     <?php
     require_once('class/Catalog.class.php');
     $c = new Catalog();
-    $c->addCategory("Category 1");
-    $c->addCategory("Category 2");
+    $cat1 = new Category("Category 1");
+    $cat2 = new Category("Category 2");
+    $c->addCategory($cat1);
+    $c->addCategory($cat2);
     $p1 = new Product(1, "Produkt 1", 44.80, "product1.png", 0.2);
     $p2 = new Product(2, "Produkt 2", 12.40, "product2.png", 0.3);
     $p3 = new Product(3, "Produkt 3", 5.60, "product3.png", 0.23);

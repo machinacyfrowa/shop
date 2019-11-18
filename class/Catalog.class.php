@@ -1,5 +1,6 @@
 <?php
 require_once('Product.class.php');
+require_once('Category.class.php');
 class Catalog {
     private $products;
     private $categoryList;
@@ -13,7 +14,7 @@ class Catalog {
         array_push($this->products, $p);
     }
 
-    public function addCategory($c) {
+    public function addCategory(Category $c) {
         array_push($this->categoryList, $c);
     }
     public function showProducts() {
@@ -24,7 +25,7 @@ class Catalog {
     public function showCategoryList() {
         $buffer = "<ul>";
         foreach ($this->categoryList as $category) {
-            $buffer .= "<li>" . $category . "</li>";
+            $buffer .= "<li>" . $category->name . "</li>";
         }
         $buffer .= "</ul>";
         echo $buffer;
