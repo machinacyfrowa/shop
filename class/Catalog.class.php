@@ -1,4 +1,5 @@
 <?php
+require_once('Product.class.php');
 class Catalog {
     private $products;
     private $categoryList;
@@ -8,7 +9,7 @@ class Catalog {
         $this->categoryList = Array();
     }
 
-    public function addProduct($p) {
+    public function addProduct(Product $p) {
         array_push($this->products, $p);
     }
 
