@@ -14,6 +14,10 @@ class Catalog {
         array_push($this->products, $p);
     }
 
+    public function getProduct($id) {
+        return $this->products[$id];
+    }
+
     public function addCategory(Category $c) {
         array_push($this->categoryList, $c);
     }
