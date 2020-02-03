@@ -14,9 +14,15 @@ class Product {
         $this->discount = $d;
     }
 
+    public function getId() 
+    {
+        return $this->id;
+    }
     public function showProduct() {
         $buffer = '<div class="col-3 text-center">';
+        $buffer .= '<a href="index.php?view=product&productId='.$this->id.'">';
         $buffer .= '<h1>' . $this->name . '</h1>';
+        $buffer .= '</a>';
         $buffer .= '<img src="img/' . $this->imageUrl . '" class="img-fluid">';
         if($this->discount != 0) {
             $newPrice = number_format($this->price * ( 1 - $this->discount ) , 2);

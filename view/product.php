@@ -1,5 +1,5 @@
 <?php
-  $c = new Catalog();
+
   include('head.php');
 ?>
    
@@ -10,7 +10,12 @@
         </div>
         <div class="col-10">
           <div class="row">
-            <?php $c->getProduct(1)->showProduct(); ?>
+            <?php 
+            if($p != null)
+              $p->showProduct(); 
+            else
+              echo "nie wybrano produktu";
+            ?>
           </div>
         </div>
       </div>
