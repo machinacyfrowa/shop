@@ -25,13 +25,9 @@ class Controller {
         {
             case 'catalog':
                 echo "Wyswietlam katalog";
-                if($this->category != null)
-                    echo "Wyświetlam kategorie o id="+$this->category;
             break;
             case 'product':
-                if($this->product != null)
-                    echo "Wyświetlam produkt o id="+$this->product;
-                else echo "Błąd - brak id produktu";
+                echo "Wyswietlam produkt";
             break;
         }
     }
