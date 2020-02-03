@@ -31,6 +31,11 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <footer class="col-12">
+          Stopka
+        </footer>
+      </div>
     </div><!--/container-->
 
     <!-- Optional JavaScript -->
