@@ -1,11 +1,6 @@
 <?php 
-
-  require_once('class/Catalog.class.php');
+require_once('class/Controller.class.php');
+$controller = new Controller();
+$controller->view();
   
-  $c = new Catalog();
-  //widok katalogu
-  //include('view/catalog.php'); 
-
-  //widok produktu
-  include('view/product.php');
 ?>

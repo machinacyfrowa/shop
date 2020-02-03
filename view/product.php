@@ -1,4 +1,5 @@
 <?php
+  $c = new Catalog();
   include('head.php');
 ?>
    
