@@ -24,14 +24,14 @@ class Controller {
         switch($this->view) 
         {
             case 'catalog':
-                echo "Wyswietlam katalog<br>";
+                echo "Wyswietlam katalog";
                 if($this->category != null)
-                    echo "Wyświetlam kategorie o id=".$this->category."<br>";
+                    echo "Wyświetlam kategorie o id="+$this->category;
             break;
             case 'product':
                 if($this->product != null)
-                    echo "Wyświetlam produkt o id=".$this->product."<br>";
-                else echo "Błąd - brak id produktu<br>";
+                    echo "Wyświetlam produkt o id="+$this->product;
+                else echo "Błąd - brak id produktu";
             break;
         }
     }
