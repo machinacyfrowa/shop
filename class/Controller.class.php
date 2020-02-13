@@ -24,11 +24,9 @@ class Controller {
                 global $c;
                 //utwórz pomocniczo katalog
                 $c = new Catalog();
-                //przygotuj globalną zmienną na produkt
-                global $p;
-                //zaczytaj produkt do zmiennej
-                $p = $c->getProduct($this->productId);
-                include('view/product.php');
+                global $smarty;
+                $smarty->assign('product', $c->getProduct($this->productId));
+                $smarty->display('product.tpl');
             break;
         }
     }

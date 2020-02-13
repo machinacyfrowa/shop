@@ -19,7 +19,7 @@ class Catalog {
         foreach($this->products as $product)
         {
             if($product->getId() == $id)
-                return $product;
+                return $product->getProductArray();
         }
         return null;
     }

@@ -33,5 +33,14 @@ class Product {
         $buffer .= '</div>';
         echo $buffer;
     }
+    public function getProductArray() {
+        $productArray = Array(
+            'id'    => $this->id,
+            'name'  => $this->name,
+            'price' => $this->price,
+            'image' => $this->imageUrl
+        );
+        return $productArray;
+    }
 }
 ?>
