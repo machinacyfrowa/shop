@@ -37,9 +37,12 @@ class Product {
         $productArray = Array(
             'id'    => $this->id,
             'name'  => $this->name,
-            'price' => $this->price,
+            'price' => number_format($this->price , 2),
             'image' => $this->imageUrl
         );
+        if($this->discount != 0) {
+            $productArray['newPrice'] = number_format($this->price * ( 1 - $this->discount ) , 2);
+        }
         return $productArray;
     }
 }

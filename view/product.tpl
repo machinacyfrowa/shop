@@ -15,7 +15,11 @@
                 <h1>{$product.name}</h1>
               </a>
               <img src="{$product.image}" class="img-fluid">
+              {if isset($product.newPrice)}
+              <h3 style="color: red;">{$product.newPrice}</h3>
+              {else}
               <h3>{$product.price}</h3>
+              {/if}
             </div>
           </div>
         </div>
