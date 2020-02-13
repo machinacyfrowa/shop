@@ -18,7 +18,9 @@ class Controller {
                 //utwórz globalną zmienną $c do której odnosimy się w catalog.php 
                 global $c;
                 $c = new Catalog();
-                include('view/catalog.php');
+                global $smarty;
+                $smarty->assign('categoryList', $c->getCategoryList());
+                $smarty->assign('productList', $c->getProductList());
             break;
             case 'product':
                 global $c;

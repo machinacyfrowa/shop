@@ -50,6 +50,9 @@ class Catalog {
         }
         return $categoryList;
     }
+    public function getProductList() {
+        //todo
+    }
     public function loadTestData() {
         $cat1 = new Category("Category 1");
         $cat2 = new Category("Category 2");
