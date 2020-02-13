@@ -25,6 +25,7 @@ class Controller {
                 //utwórz pomocniczo katalog
                 $c = new Catalog();
                 global $smarty;
+                $smarty->assign('categoryList', $c->getCategoryList());
                 $smarty->assign('product', $c->getProduct($this->productId));
                 $smarty->display('product.tpl');
             break;

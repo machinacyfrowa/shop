@@ -39,6 +39,17 @@ class Catalog {
         $buffer .= "</ul>";
         echo $buffer;
     }
+    public function getCategoryList() {
+        $categoryList = Array();
+        foreach ($this->categoryList as $category) {
+            array_push($categoryList, 
+                        Array(
+                            'name'  => $category->name,
+                        )
+                    );
+        }
+        return $categoryList;
+    }
     public function loadTestData() {
         $cat1 = new Category("Category 1");
         $cat2 = new Category("Category 2");
