@@ -6,7 +6,8 @@ class Controller {
     public function __construct()
     {
         if(isset($_REQUEST['view'])) 
-            $this->view = $_REQUEST['view'];    
+            $this->view = $_REQUEST['view'];   
+        else $this->view = null; 
         if(isset($_REQUEST['productId'])) 
             $this->productId = $_REQUEST['productId'];    
     }
@@ -14,6 +15,7 @@ class Controller {
     {
         switch($this->view) 
         {
+            case null:
             case 'catalog': 
                 //utwórz globalną zmienną $c do której odnosimy się w catalog.php 
                 global $c;
