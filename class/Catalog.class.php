@@ -51,7 +51,11 @@ class Catalog {
         return $categoryList;
     }
     public function getProductList() {
-        //todo
+        $productList = Array();
+        foreach ($this->products as $product) {
+            array_push($productList, $product->getProductArray());
+        }
+        return $productList;
     }
     public function loadTestData() {
         $cat1 = new Category("Category 1");

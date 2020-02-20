@@ -21,6 +21,7 @@ class Controller {
                 global $smarty;
                 $smarty->assign('categoryList', $c->getCategoryList());
                 $smarty->assign('productList', $c->getProductList());
+                $smarty->display('catalog.tpl');
             break;
             case 'product':
                 global $c;
